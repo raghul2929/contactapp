@@ -1,0 +1,120 @@
+<style>
+    .navbar {
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(172, 223, 172);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         padding: 2px;
+    }
+   
+    .navbar nav {
+        width: 99%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: black;
+    }
+
+    .navbar nav a {
+        padding: 5px 10px; /* Added horizontal padding for better spacing */
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        border: 2px solid rgb(224, 255, 152);
+        text-align: center;
+        border-radius: 10px;
+        transition: transform 0.3s, background-color 0.3s; /* Smooth animation */
+    }
+
+    .navbar nav a:hover {
+        transform: scale(1.1);
+        background-color: green;
+    }
+
+    .logo {
+        color: green;
+        font-size: 30px;
+    }
+
+    .logo2 {
+        color: goldenrod;
+        font-size: 40px;
+        margin-left: 10px;
+        font-weight: 900;
+        position: relative;
+        right: 15px;
+        bottom: 5px;
+        text-shadow: 0px 0px 20px gold;
+    }
+
+    
+    @media (max-width: 768px) {
+        .navbar nav {
+            flex-direction: column; 
+            justify-content: center;
+        }
+
+        .navbar nav a {
+            margin: 5px 0; 
+            font-size: 18px;
+            width: 80%; 
+        }
+
+        .logo {
+            font-size: 24px;
+            
+        }
+
+        .logo2 {
+            font-size: 30px;
+            text-shadow: 0px 0px 10px gold;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navbar {
+            padding: 5px;
+            height: auto; 
+        }
+        .navbar nav {
+            width: 99%;
+            flex-direction: column; 
+            justify-content: center
+        }
+        .navbar nav a {
+            font-size: 16px;
+            width: 100%; 
+            padding: 8px; 
+        }
+
+        .logo {
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        .logo2 {
+            font-size: 25px;
+            right: 10px;
+            bottom: 3px;
+        }
+    }
+</style>
+
+
+<body>
+    <div class="navbar">
+        <nav>
+            <div class="logo">
+                 <span >Connect </span>
+                 <span class="logo2" >+</span>
+            </div>
+        
+    <a href="/home"><span>home</span></a>
+    <a href="/api/addcontacts"><span>Add contact</span></a>
+    <a href="/api/allcontact"><span>View contacts</span></a>
+    </nav>
+    </div>
+</body>

@@ -1,0 +1,143 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+ 
+.addcontact{
+  width: 100%;
+  height: 80vh;
+  background-color:rgb(189, 235, 189);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addcontact main{
+  width: 99%;
+  height: 99%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ 
+  .form {
+    width: 100%;
+    max-width: 400px;
+    height:auto;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, #4c4a4a60, #525253); 
+    border-radius: 16px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease;
+    color:rgb(156, 235, 156);
+    line-height: 30px;
+    
+  }
+
+  .form:hover {
+    transform: translateY(-5px); 
+  }
+
+
+  .addcontact h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color:rgb(178, 230, 178);
+    margin-bottom: 20px;
+  }
+
+
+  form tr {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  form td {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;    font-size: 14px;
+  }
+ 
+ 
+ 
+  input[type="text"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+     /* margin-top: 20px; */
+   
+  }
+
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  select:focus {
+    outline: none;
+    border-color: #25fc7f;
+    box-shadow: 0 0 8px rgba(37, 252, 162, 0.5); /* Glow effect */
+    background: #eaf4ff; /* Slightly tinted background */
+  }
+
+  select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTInIGhlaWdodD0nMTInIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nIzI1NzVmYycgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMyAxMEwxMiAyMCAyMSAxMEgzWicvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+  }
+
+  /* Submit Button Styling */
+   .addcontact button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #25fc8d,green); /* Gradient button */
+    border: none;
+    border-radius: 30px; /* Fully rounded button */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(135deg,green, #d5d6d7); /* Reverse gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Elevated hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+
+  button:active {
+    transform: scale(0.97); /* Subtle press effect */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    body {
+      padding: 15px; /* Add spacing on smaller screens */
+    }
+
+    .form {
+      padding: 20px; /* Adjust form padding for small devices */
+    }
+
+    h1 {
+      font-size: 24px; /* Scale down heading */
+    }
+
+    button {
+      font-size: 14px; /* Adjust button size */
+    }
+  }

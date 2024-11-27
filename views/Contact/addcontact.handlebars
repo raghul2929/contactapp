@@ -1,0 +1,36 @@
+
+
+<body>
+    <div class="addcontact">
+    <main>
+      <div class="form">
+   <form action="/api/addcontacts" method="post">
+    <h1>Add contacts</h1>
+    <tr>
+        <td>Firstname:</td>
+        <td><input type="text" name="firstname"></td>
+    </tr><br>
+    <tr>
+        <td>last name:</td>
+        <td><input type="text" name="lastname"></td>
+    </tr><br>
+    <tr>
+        <td>phoneno:</td>
+        <td><input type="tel" pattern="[0-9]{10}" name="phoneno" id=""></td>
+    </tr><br>
+    
+    <tr>
+        <td> saving location:</td>
+        <td><select name="location" id="">
+            <option value="mobile">mobile</option>
+            <option value="sim">sim</option>
+            <option value="email">email</option>
+        </select></td>
+    </tr><br>
+    <button>submit</button>
+   </form>
+  
+   </div>
+    </main>
+   </div>
+</body>
