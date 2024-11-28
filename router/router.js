@@ -3,19 +3,28 @@ const mongoose = require('mongoose');
 const cnt_schema =require('../schema/schema');
 const fs = require('fs');
 const { title } = require('process');
+router.use(express.json());
 
 const router=Router()
-router.get('/addcontacts',(req, res)=>{
-    res.render('contact/addcontact')
-    
-    router.post('/addcontacts',async (req, res)=>{
-    await cnt_schema.create(req.body)
-    console.log(req.body)
-    res.redirect('/home',302,{})
-
+router.get('/addcontacts', (req, res) => {
+    res.render('contact/addcontact');
 });
 
-})
+// POST route for handling form submission
+router.post('/addcontacts', async (req, res) => {
+    try {
+        // Create a new contact
+        await cnt_schema.create(req.body);
+        console.log(req.body);
+
+        // Redirect to home
+        res.redirect(302, '/home');
+    } catch (error) {
+        // Log the error and send an appropriate response
+        console.error('Error adding contact:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
 
 
 router.get('/allcontact', async (req, res) => {
