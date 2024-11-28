@@ -7,14 +7,17 @@ const { title } = require('process');
 const router=Router()
 router.get('/addcontacts',(req, res)=>{
     res.render('contact/addcontact')
-
-})
-router.post('/addcontacts',async (req, res)=>{
+    
+    router.post('/addcontacts',async (req, res)=>{
     await cnt_schema.create(req.body)
     console.log(req.body)
     res.redirect('/home',302,{})
 
 });
+
+})
+
+
 router.get('/allcontact', async (req, res) => {
     let data = await cnt_schema.find({}).lean()
     console.log(data);
