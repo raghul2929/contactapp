@@ -6,7 +6,7 @@ const { title } = require('process');
 
 
 const router=Router()
-router.use(express.json());
+
 router.get('/addcontacts', (req, res) => {
     res.render('Contact/addcontact');
 });
