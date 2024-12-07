@@ -7,7 +7,7 @@ router.use(express.json());
 
 const router=Router()
 router.get('/addcontacts', (req, res) => {
-    res.render('contact/addcontact');
+    res.render('Contact/addcontact');
 });
 
 // POST route for handling form submission
