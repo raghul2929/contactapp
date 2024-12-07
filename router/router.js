@@ -3,9 +3,10 @@ const mongoose = require('mongoose');
 const cnt_schema =require('../schema/schema');
 const fs = require('fs');
 const { title } = require('process');
-router.use(express.json());
+
 
 const router=Router()
+router.use(express.json());
 router.get('/addcontacts', (req, res) => {
     res.render('Contact/addcontact');
 });
